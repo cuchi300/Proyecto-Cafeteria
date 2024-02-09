@@ -1,0 +1,52 @@
+@use 'variables' as v;
+@use 'base/mixins' as m;
+h1,h2,h3{
+    font-family: v.$fuente_principal;
+    margin: 0 0 v.$separacion 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 2.5rem;
+    color: v.$primario;
+    @include m.tablet { 
+        font-size: 3rem;
+    }
+
+    span{
+        font-size: 1.6rem;
+        display: block;
+        font-weight: 100;
+        color: v.$secundario;
+    }
+    &::after{
+        content: '';
+        background-image: url(../img/cafe.svg);
+        background-repeat: no-repeat;
+        background-size: 6rem;
+        display: block;
+        height: 6rem;
+        width: 6rem;
+        background-position: center center;
+        margin: 0 auto;
+    }
+}
+.heading-blanco{ // extend hereda los atributos del elemento que coloquemos al lado
+    @extend h2;
+    color: v.$blanco;
+
+    span{
+        color: v.$secundario;
+    }
+
+    &::after{
+        display: none;
+    }
+}
+h3{
+    font-size: 3rem;
+}

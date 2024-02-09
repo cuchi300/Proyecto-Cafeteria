@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    background-color: v.$primario;
+    
+    .footer-contenido{
+        padding: 5rem;
+        -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
+        @include m.desktop { 
+            @include m.grid(3,2rem);
+        }
+    }
+
+    .copyright{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 1.6rem;
+        margin: 0;
+        padding: 1.8rem;
+    }
+    .copy-menu{
+        color: v.$negro;
+    }
+    
+}
+
+.footer-box{
+    font-family: v.$fuente_cursiva;
+    text-align: center;
+    margin-bottom: 4rem;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    @include m.desktop { 
+        margin-bottom: 0;
+    }
+    h3{
+        margin: 0 0 1rem 0;
+        font-size: 2.4rem;
+        color: v.$secundario;
+    }
+
+    p{
+        font-size: 1.8rem;
+        letter-spacing: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    
+}
+
+.footer-menu{
+    background-color: v.$cafeClaro;
+}

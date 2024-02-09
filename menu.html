@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Cups - Menu</title>
+    <!-- font google -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@300;400;700;900&display=swap" as="font">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- hojas de estilo -->
+    <link rel="preload" href="build/css/app.css" as="style">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header header-menu">
+        <div class="contenido-header contenedor">
+            <div class="barra">
+                <div class="logo">
+                    <!-- Cuando se hace el deployment del proyecto se sube solo la carpeta build no la src -->
+                    <img src="build/img/logo.svg" alt="logo cafeteria">
+                </div>
+
+                <button class="header-button" type="button" id="navbar">
+                    <img src="build/img/menu.png" alt="imagen menu">
+                </button>
+
+                <nav id="navbar-active" class="nav-principal">
+                    <a href="index.html">Home</a>
+                    <a href="nosotros.html">About Us</a>
+                    <a href="proceso.html">Process</a>
+                    <a class="activo" href="menu.html">Menu</a>
+                    <a href="galeria.html">Gallery</a>
+                    <a href="contacto.html">Contact</a>
+                </nav>
+            </div>
+
+            <div class="texto-header">
+                <h1>Enjoy our delicious menu</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-principal padding-bottom-0">
+        <h2><span>We use the</span> best ingredients</h2>
+
+        <div class="contenido-menu">
+            <div class="texto">
+                <p>Coffee Cups, where each cup tells a story and each sip is an adventure in itself. Immerse yourself in our world of exquisite flavors and captivating aromas as you explore our varied menu, carefully crafted to satisfy all tastes and cravings.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="nuestro-menu">
+        <h2 class="heading-blanco"><span>Our delicious</span>Menu</h2>
+
+        <div class="contenedor grid-menu">
+            <section class="menu cafe">
+                <h3>Coffee</h3>
+                <ul>
+                    <li>
+                        <p>Coffee Latte <span>Coffee Express with hot evaporated milk</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Coffee Mocha <span>Express with whipped cream</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>American coffee <span>Black Coffee</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>Capuccino<span>Espresso with a soft layer of foam</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Cold Mocha Coffee<span>Espresso, sweet with mocha and milk.</span> </p>
+                        <p class="precio">$29</p>
+                    </li>
+                    <li>
+                        <p>Burnt Cold Mocha<span>Espresso, ice, with burnt sugar and butter.</span> </p>
+                        <p class="precio">$35</p>
+                    </li>
+                    <li>
+                        <p>Latte with Caramel<span>Espresso, milk and caramel.</span> </p>
+                        <p class="precio">$39</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="menu comida">
+                <h3>Meal</h3>
+                <ul>
+                    <li>
+                        <p>Chicken Baguette <span>Delicious Baguette with grilled chicken</span> </p>
+                        <p class="precio">$45</p>
+                    </li>
+                    <li>
+                        <p>Chicken and Cheese Baguette <span>Baguette combined with Chicken and Manchego Cheese</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Baguette with Bacon<span>Baguette with spices and vegetables, plus bacon</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Ham Baguette<span>Delicious Baguette with Ham and Spices</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Baguette with Ham, Cheese and Bacon<span>The house special</span> </p>
+                        <p class="precio">$69</p>
+                    </li>
+                    <li>
+                        <p>Chicken sandwich<span>Delicious sandwich with chicken and spices</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Ham and cheese sandwich<span>Yellow Cheese with Ham and Cheese</span> </p>
+                        <p class="precio">$59</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer footer-menu">
+        <div class="contenedor footer-contenido bg-white">
+            <div class="footer-box ubicacion">
+                <h3>Location</h3>
+                <p>Manzana 937 Lote 5</p>
+                <p>Jujuy - Argentina</p>
+            </div>
+            <div class="footer-box reservacion">
+                <h3>Reservation</h3>
+                <p>Tel. 1162173874</p>
+            </div>
+            <div class="footer-box horario">
+                <h3>Schedule</h3>
+                <p>Mon-Thu: 11:00 - 22:00</p>
+                <p>Fri-Sat: 09:00 - 24:00</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <p class="copyright copy-menu">All rights reserved &copy; Coffe Cups</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

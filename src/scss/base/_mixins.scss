@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+@mixin telefono {
+    @media (max-width: v.$telefono) {
+        @content; // con content le decimos al mixin que nosotros agregamos el contenido al incluirlo en un archivo sass
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $gap){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+

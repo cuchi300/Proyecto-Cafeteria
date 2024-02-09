@@ -1,0 +1,12 @@
+// @import - forma antigua de importar archivos de sass
+@use 'base'; // buscaa el archivo en base/_index.scss y compila // forma actual para importar archivos de sass
+@use 'header';
+@use 'inicio';
+@use 'footer';
+@use 'internas';
+
+
+
+
+// si queremos que algo siempre se reescriba las utilidades se colocan siempre al final de todo.
+@use 'utilidades';

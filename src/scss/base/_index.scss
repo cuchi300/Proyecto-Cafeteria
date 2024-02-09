@@ -1,0 +1,8 @@
+// aca van los archivos que estan dentro de una carpeta nueva como por ejemplo la carpeta BASE en este ejemplo y asi incluir todos estos archivos en el app.scss y compilarlo.
+// forward sirve para incluir archivos pero no para compilar
+// siempre hay que ordenar los archivos, el que esta primero es el que va a aparecer antes que los de abajo
+@forward 'normalize';
+@forward 'variables';
+@forward 'globales';
+@forward 'mixins';
+@forward 'tipografia';
