@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafeteria</title>
-    <!-- GOOGLE FONT -->
+    <title>Coffee Cups - Home</title>
+    <!--Prefetch-->
+    <link rel="prefetch" href="galeria.html" as="document">
+    <!-- font google -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@300;400;700;900&display=swap" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- HOJA ESTILOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- hojas de estilo -->
+    <link rel="preload" href="build/css/app.css" as="style">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
@@ -17,129 +20,207 @@
         <div class="contenido-header contenedor">
             <div class="barra">
                 <div class="logo">
-                    <img src="build/img/logo.svg" alt="logo header">
+                    <!-- Cuando se hace el deployment del proyecto se sube solo la carpeta build no la src -->
+                    <img src="build/img/logo.svg" alt="logo cafeteria">
                 </div>
 
-                <nav class="nav-principal">
-                    <a class="activo" href="index.html">Inicio</a>
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="proceso.html">Proceso</a>
+                <button class="header-button" type="button" id="navbar">
+                    <img src="build/img/menu.png" alt="imagen menu">
+                </button>
+
+                <nav id="navbar-active" class="nav-principal">
+                    <a class="activo" href="index.html">Home</a>
+                    <a href="nosotros.html">About Us</a>
+                    <a href="proceso.html">Process</a>
                     <a href="menu.html">Menu</a>
-                    <a href="galeria.html">Galeria</a>
-                    <a href="contacto.html">Contacto</a>
+                    <a href="galeria.html">Gallery</a>
+                    <a href="contacto.html">Contact</a>
                 </nav>
             </div>
 
             <div class="texto-header">
-                <h1>Disfruta una deliciosa taza de Café</h1>
+                <h1>Enjoy a delicious cup of coffee</h1>
             </div>
         </div>
     </header>
 
-    <main class="contenedor contenido-principal text-center">
+    <main class="contenedor contenido-principal text-center margin-negativo-10 bg-white">
         <section class="conoce">
-            <h2><span>Conoce Mas</span> Sobre Nosotros</h2>
-            
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore atque fuga consequuntur molestiae aliquam veritatis perferendis, laudantium maxime, exercitationem nam nobis beatae facilis asperiores. Nemo obcaecati provident beatae impedit maxime eos consequatur explicabo harum debitis ducimus facere quaerat, ea earum corporis nulla modi, ut sed, consequuntur delectus culpa. Unde expedita voluptatibus maiores error ratione temporibus quasi ad debitis dolorum dolorem?</p>
+            <h2><span>Learn more</span> About us</h2>
+            <p>Welcome to Coffee Cups, a place where coffee is more than a drink: it is an experience that delights all your senses and transports you to a world of exceptional aromas and flavors.</p>
+            <p>At Coffee Cups, we are committed to a passion for high-quality coffee, from the selection of beans to the preparation of each cup. Our story began with a simple vision: to create a welcoming space where coffee lovers can gather, share unforgettable moments and delight in the delights of this fascinating drink.</p>
         </section>
 
         <section class="iconos">
             <ul class="listado-iconos">
                 <li>
                     <img src="build/img/icono_cafe.svg" alt="icono cafe">
-                    <p>Café</p>
+                    <p>Coffee</p>
                 </li>
-
                 <li>
-                    <img src="build/img/icono_postre.svg" alt="icono cafe">
-                    <p>Postres</p>
+                    <img src="build/img/icono_postre.svg" alt="icono postre">
+                    <p>Desserts</p>
                 </li>
-
                 <li>
-                    <img src="build/img/icono_te.svg" alt="icono cafe">
-                    <p>Té</p>
+                    <img src="build/img/icono_te.svg" alt="icono te">
+                    <p>Téa</p>
                 </li>
             </ul>
         </section>
 
         <section class="experiencia">
-            <h2><span>Vive la</span> Experiencia</h2>
+            <h2><span>Live the</span> experience</h2>
 
             <div class="galeria">
-                
-            </div>
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_1.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_1.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_1.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_2.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_2.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_2.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_3.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_3.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_3.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_4.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_4.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_4.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_5.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_5.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_5.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_6.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_6.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_6.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_7.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_7.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_7.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_8.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_8.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_8.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_9.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_9.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_9.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+
+                <div class="imagen">
+                    <picture>
+                        <source srcset="build/img/galeria/galeria_10.avif" type="image/avif">
+                        <source srcset="build/img/galeria/galeria_10.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/galeria/galeria_10.jpg" width="500" height="300" alt="imagen galeria">
+                    </picture>
+                </div>
+            </div> <!-- .galeria -->
         </section>
     </main>
 
     <section class="nuestro-menu">
-        <h2 class="heading-blanco"><span>Nuestro delicioso</span>Menu</h2>
+        <h2 class="heading-blanco"><span>Our delicious</span>Menu</h2>
 
         <div class="contenedor grid-menu">
             <section class="menu cafe">
-                <h3>Café</h3>
-
+                <h3>Coffee</h3>
                 <ul>
                     <li>
-                        <p>Café Latte <span>Café Espresso con leche caliente evaporada</span> </p>
+                        <p>Coffee Latte <span>Coffee Express with hot evaporated milk</span> </p>
                         <p class="precio">$25</p>
                     </li>
                     <li>
-                        <p>Café Mocha <span>Espresso con crema batida</span> </p>
+                        <p>Coffee Mocha <span>Express with whipped cream</span> </p>
                         <p class="precio">$30</p>
                     </li>
                     <li>
-                        <p>Café Americano <span>Café Negro</span> </p>
+                        <p>American coffee <span>Black Coffee</span> </p>
                         <p class="precio">$30</p>
                     </li>
                     <li>
-                        <p>Capuccino<span>Espresso con una capa suave de espuma</span> </p>
+                        <p>Capuccino<span>Espresso with a soft layer of foam</span> </p>
                         <p class="precio">$25</p>
                     </li>
                     <li>
-                        <p>Café Mocha Frio<span>Espresso, dulce con mocha y leche.</span> </p>
+                        <p>Cold Mocha Coffee<span>Espresso, sweet with mocha and milk.</span> </p>
                         <p class="precio">$29</p>
                     </li>
                     <li>
-                        <p>Mocha Frio Quemado<span>Espresso, hielo, con azucar quemada y mantequilla.</span> </p>
+                        <p>Burnt Cold Mocha<span>Espresso, ice, with burnt sugar and butter.</span> </p>
                         <p class="precio">$35</p>
                     </li>
                     <li>
-                        <p>Latte con Caramelo<span>Espresso, leche y caramelo.</span> </p>
+                        <p>Latte with Caramel<span>Espresso, milk and caramel.</span> </p>
                         <p class="precio">$39</p>
                     </li>
                 </ul>
             </section>
-
             <section class="menu comida">
-                <h3>Comida</h3>
-
+                <h3>Meal</h3>
                 <ul>
                     <li>
-                        <p>Baguette de Pollo <span>Delicioso Baguette con pollo a la plancha</span> </p>
+                        <p>Chicken Baguette <span>Delicious Baguette with grilled chicken</span> </p>
                         <p class="precio">$45</p>
                     </li>
                     <li>
-                        <p>Baguette Pollo y Queso <span>Baguette combinado con Pollo y Queso Manchego</span> </p>
+                        <p>Chicken and Cheese Baguette <span>Baguette combined with Chicken and Manchego Cheese</span> </p>
                         <p class="precio">$50</p>
                     </li>
                     <li>
-                        <p>Baguette con Tocino<span>Baguette con especias y verduras, además de tocino</span> </p>
+                        <p>Baguette with Bacon<span>Baguette with spices and vegetables, plus bacon</span> </p>
                         <p class="precio">$50</p>
                     </li>
                     <li>
-                        <p>Baguette de Jamón<span>Delicioso Baguette con Jamón y Especias</span> </p>
+                        <p>Ham Baguette<span>Delicious Baguette with Ham and Spices</span> </p>
                         <p class="precio">$65</p>
                     </li>
                     <li>
-                        <p>Baguette con Jamón, Queso y Tocino<span>El especial de la casa</span> </p>
+                        <p>Baguette with Ham, Cheese and Bacon<span>The house special</span> </p>
                         <p class="precio">$69</p>
                     </li>
                     <li>
-                        <p>Sandwich de Pollo<span>Delicioso sandwich con Pollo y especies</span> </p>
+                        <p>Chicken sandwich<span>Delicious sandwich with chicken and spices</span> </p>
                         <p class="precio">$65</p>
                     </li>
                     <li>
-                        <p>Sandwich de Jamón y queso<span>Queso Amarillo con Jamón y Queso</span> </p>
+                        <p>Ham and cheese sandwich<span>Yellow Cheese with Ham and Cheese</span> </p>
                         <p class="precio">$59</p>
                     </li>
                 </ul>
@@ -147,39 +228,50 @@
         </div>
     </section>
 
-    <section class="nuestros-testimoniales contenedor margin-negativo bg-white">
-        <h2><span>Lo que dicen nuestros</span> Clientes </h2>
+    <section class="nuestros-testimoniales contenedor margin-negativo-10 bg-white">
+        <h2><span>What ours say</span>Customers</h2>
 
-        <div class="testimonial">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maiores dicta sint totam nobis provident ex esse tenetur mollitia eveniet doloremque quam illo dolor quas rerum voluptate corporis in sit nam, consequatur saepe consequuntur repellat praesentium minus? Debitis perspiciatis repudiandae in ducimus dolorem, optio, fuga odit dolorum, nihil vero ad.</p>
 
-            <p class="autor">-Miguel Agustin Baiud</p>
+        <p class="swipe-left">Swipe left</p>
+        <div class="grid-testimoniales">
+            <div class="testimonial">
+                <p class="texto">The menu offered a tempting variety of coffees, from classic espressos to the most creative and daring creations. I opted for a cappuccino, and I must say it was one of the best I've ever had. The foam was smooth and creamy, and the coffee had a robust but balanced flavor, perfectly brewed.</p>
+                <p class="autor">- Alfred Molina</p>
+            </div>
+            <div class="testimonial">
+                <p class="texto">The atmosphere of the cafe was vibrant but calm, with soft music in the background and modern, cozy decor. I felt comfortable and relaxed, and was able to immerse myself in my work while enjoying my coffee.</p>
+                <p class="autor">- Jhon Cusack</p>
+            </div>
+            <div class="testimonial">
+                <p class="texto">The staff was not only friendly, but also knowledgeable about the different types of coffee and willing to answer any questions I had about the beans or brewing methods.</p>
+                <p class="autor">- Harrison Ford</p>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="contenedor contenido-footer bg-white">
+        <div class="contenedor footer-contenido bg-white">
             <div class="footer-box ubicacion">
-                <h3>Ubicación</h3>
-                <p>Nicolas Copernico 5990</p>
-                <p>Jujuy, Argentina</p>
+                <h3>Location</h3>
+                <p>Manzana 937 Lote 5</p>
+                <p>Jujuy - Argentina</p>
             </div>
             <div class="footer-box reservacion">
-                <h3>Reservación</h3>
-                <p>Cel. 1162173874</p>
-                <a href="tel:+541162173874">Llamar</a>
+                <h3>Reservation</h3>
+                <p>Tel. 1162173874</p>
             </div>
             <div class="footer-box horario">
-                <h3>Horario</h3>
-                <p>Lun-Jue: 11:00 - 22:00</p>
-                <p>Vie-Sab: 09:00 - 24:00</p>
-                <p>Domingo Cerrado</p>
+                <h3>Schedule</h3>
+                <p>Mon-Thu: 11:00 - 22:00</p>
+                <p>Fri-Sat: 09:00 - 24:00</p>
+                <p>Sunday: Closed</p>
             </div>
         </div>
 
-        <p class="copyright">Todos los derechos reservados &copy;. 2022. <span>Desarrollado por <b>Miguel Agustin Baiud</b></span></p>
+        <p class="copyright">All rights reserved &copy; Coffe Cups</p>
     </footer>
-
-    <script src="build/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    
 </body>
 </html>

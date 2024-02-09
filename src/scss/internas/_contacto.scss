@@ -2,63 +2,56 @@
 @use 'base/mixins' as m;
 
 .contenido-contacto{
-    @include m.tablet {
-        @include m.grid(2, v.$separacion);
+
+
+    @include m.desktop { 
+        @include m.grid(2,3rem);
         background-image: url(../img/granos_cafe.jpg);
         background-repeat: no-repeat;
         background-position: right center;
-        background-size: 40%;
+        background-size: 35%;
     }
 }
 
 .formulario{
-
     .campo{
         margin-bottom: 2rem;
 
         &:last-of-type{
             margin-bottom: 0;
         }
-
         label{
-            text-transform: uppercase;
             display: block;
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
         }
-
-        input:not([type="submit"]){
+        input:not([type="submit"]),
+        select{
             width: 100%;
-            padding: 1rem;
-            border: .5rem solid v.$primario;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 3px solid v.$primario;
+            background-color: v.$blanco;
         }
-
+    
         input[type="submit"]{
             background-color: v.$primario;
-            width: 100%;
             border: none;
-            padding: 1rem;
             color: v.$blanco;
-            font-size: 2.2rem;
             font-weight: 700;
+            font-size: 2rem;
+            padding: 1.5rem 5rem;
+            width: 100%;
             text-transform: uppercase;
+            @include m.tablet { 
+                width: auto;
+            }
             &:hover{
                 cursor: pointer;
+                background-color: lighten(v.$primario, 10%);
             }
         }
     }
 }
 
-.error{
-    background-color: rgb(184, 23, 23);
-    color: v.$blanco;
-    text-align: center;
-    padding: .5rem;
-}
-
-.correcto{
-    background-color: rgb(88, 138, 31);
-    color: v.$blanco;
-    text-align: center;
-    padding: .5rem;
-}

@@ -3,29 +3,12 @@
 .text-center{
     text-align: center;
 }
+.margin-negativo-10{
+    margin-top: -10rem;
+}
 .bg-white{
     background-color: v.$blanco;
 }
-.margin-negativo{
-    margin-top: -10rem;
-}
 .padding-bottom-0{
     padding-bottom: 0;
-}
-.padding-0{
-    padding: 0;
-    .contenido-header{
-        margin: 0;
-    }
-}
-.cerrar-modal{
-    background-color: v.$blanco;
-    display: grid;
-    place-items: center;
-    width: 4rem;
-    height: 4rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-    border-radius: 100%;
-    cursor: pointer;
 }

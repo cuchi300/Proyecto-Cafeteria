@@ -2,41 +2,49 @@
 @use 'base/mixins' as m;
 
 .proceso-cafe{
-    margin-bottom: v.$separacion;
-    @include m.tablet {
-        display:flex;
-        gap: v.$separacion;
-        align-items: center;
-    }
+    margin-bottom: 7rem;
     &:last-of-type{
         margin-bottom: 0;
     }
-// even selecciona los numero pares y odd selecciona numero impares
-    &:nth-child(even){
-        .texto{
-            order: -1;
-            // con (order -1) el elemento se coloca primero, y empuja el que estaba primero al segundo lugar 
+    @include m.desktop {
+        display: flex;
+        gap: v.$separacion;
+        align-items: center;
+
+        &:nth-child(even){ // con even seleccionamos todos los que son numeros pares
+            // con odd se selecciona los impares para aplicarles estilos o ordenarlos. Siempre y cuando el contenedor padre tenga un displa flex o grid
+            .texto{
+                order: -1; // order se utiliza cuando hay un display flex como padre
+            } // cuando ponemos el valor de -1 garantizamos de que el contenedor se ponga primero que todos
         }
     }
+
     .imagen,
     .texto{
         flex: 1;
     }
+}
 
-    .texto{
-        margin-top: 1rem;
-        h3{
-            margin: 0;
-            text-align: left;
-            color: v.$primario;
+.texto{
+    margin-top: 2rem;
+    text-align: left;
+    h3{
+        text-align: left;
+        margin: 0;
+        color: v.$primario;
+        font-size: 2.5rem;
+        font-weight: 300;
+        &::after{
+            content: '';
+            display: block;
+            height: 3px;
+            width: 50%;
+            background-color: v.$secundario;
 
-            &::after{
-                content: '';
-                display: block;
-                width: 50%;
-                height: 0.5rem;
-                background-color: v.$secundario;
+            @include m.tablet { 
+                width: 25rem;
             }
         }
     }
+
 }

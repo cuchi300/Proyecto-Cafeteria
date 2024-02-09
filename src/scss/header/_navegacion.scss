@@ -1,28 +1,65 @@
-@use 'base/mixins' as m;
 @use 'base/variables' as v;
+@use 'base/mixins' as m;
+// @use 'sass:math'; // para operaciones matematicas en sass
 
-.nav-principal {
+.nav-principal{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    margin: 5rem 0;
+    gap: 1.5rem;
+    margin-top: 5rem;
     @include m.tablet {
         flex-direction: row;
         margin: 0;
+        gap: 2rem;
+        // gap: math.div( v.$separacion, 4); // toma los 5rem de v.$separacion y divide en 4 y cada enlace toma 1.25rem 
     }
 
     a{
         color: v.$blanco;
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-transform: uppercase;
-        font-weight: 700;
-        transition: color .2s;
-        &:hover{
-            color: v.$secundario;
+        font-weight: 400;
+        @include m.tablet { 
+            font-size: 1.6rem;
         }
-        &.activo{
+        &:hover{
+            @include m.desktop { 
+                color: v.$secundario;
+            }
+        }
+
+        &.activo {
             color: v.$secundario;
         }
     }
+
+    @include m.telefono { 
+        height: 0;
+        opacity: 0;
+        transition: all .3s;
+        transform: translateY(-10rem);
+        overflow: hidden;
+        &.mostrar{
+            height: 100%;
+            opacity: 1;
+            transform: translateY(0);
+            overflow: visible;
+        }
+
+        &.posicion{
+            position: absolute;
+            left: 0;
+            top: 15rem;
+            right: 0;
+            background-color: #5e311e;
+            padding: 0;
+        }
+        &.bajar{
+            height: auto;
+            padding: 2rem 0;
+            opacity: 1;
+        }
+    }
+    
 }

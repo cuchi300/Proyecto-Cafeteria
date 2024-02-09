@@ -2,48 +2,61 @@
 @use 'base/mixins' as m;
 
 .nuestro-menu{
+    // se puede agregar multiples background con comas
     background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, v.$primario, v.$primario);
     background-repeat: no-repeat;
-    background-position: center 5rem, center 92%, 100%;
+    //tambien podemos posicionar cada imagen siempre y cuando colocando comas
+    background-position: center 5rem, center 95%, 100%;
     background-size: 200%;
-    padding: 15rem 5rem 20rem 5rem;
-    @include m.tablet {
+    padding: 15rem 1rem 20rem 1rem;
+
+    @include m.tablet { 
         padding: 15rem 0 20rem 0;
-        background-size: 100%;
+        background-size: 100%
     }
-    @include m.desktop {
+    @include m.desktop { 
         background-size: 50%, 50%, 100%;
     }
 }
+
 .grid-menu{
-    @include m.tablet {
+    @include m.desktop { 
         @include m.grid(2,2rem);
     }
 }
 
 .menu{
-    h3 {
+    h3{
         color: v.$blanco;
+        margin: 5rem 0 1rem 0;
     }
-
-    li {
+    li{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        p {
+        margin-bottom: 1.5rem;
+        p{
             color: v.$blanco;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             line-height: 1.5;
-            margin: 0 0 2.5rem 0;
-            span{
-                display: block;
-                color: v.$secundario;
-            }
+            font-weight: 500;
+            margin: 0;
         }
 
-        .precio{
-            font-size: 4rem;
-            font-weight: 700;
+        span{
+            display: block;
+            color: v.$secundario;
+            font-weight: 300;
         }
     }
+    
+    .precio{
+        font-size: 3rem;
+        font-weight: 700;
+        @include m.tablet { 
+            font-size: 3rem;
+        }
+    }
+
+    
 }

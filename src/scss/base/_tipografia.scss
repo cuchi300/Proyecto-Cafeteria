@@ -1,5 +1,5 @@
 @use 'variables' as v;
-
+@use 'base/mixins' as m;
 h1,h2,h3{
     font-family: v.$fuente_principal;
     margin: 0 0 v.$separacion 0;
@@ -11,39 +11,42 @@ h1{
     font-size: 4rem;
 }
 h2{
-    font-size: 3.8rem;
+    font-size: 2.5rem;
     color: v.$primario;
-    span{
-        color: v.$secundario;
-        font-size: 1.8rem;
-        display: block;
+    @include m.tablet { 
+        font-size: 3rem;
     }
 
+    span{
+        font-size: 1.6rem;
+        display: block;
+        font-weight: 100;
+        color: v.$secundario;
+    }
     &::after{
         content: '';
-        display: block;
-        width: 10rem;
-        height: 10rem;
         background-image: url(../img/cafe.svg);
-        background-size: 10rem;
+        background-repeat: no-repeat;
+        background-size: 6rem;
+        display: block;
+        height: 6rem;
+        width: 6rem;
+        background-position: center center;
         margin: 0 auto;
     }
 }
-
-.heading-blanco{
+.heading-blanco{ // extend hereda los atributos del elemento que coloquemos al lado
     @extend h2;
     color: v.$blanco;
 
     span{
-        color: v.$blanco;
+        color: v.$secundario;
     }
 
     &::after{
         display: none;
     }
 }
-
-    
 h3{
-    font-size: 3.2rem;
+    font-size: 3rem;
 }
